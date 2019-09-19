@@ -1,12 +1,12 @@
 class EmailAddressParser
   
-	@@emails = []
+	@emails = []
 
   def initialize(emails)
-  @@emails = emails
+  @emails = emails
 	end
   
-  def parse() #parse emails into an array of unique addresses
-		new_email_array = @@emails.split(/[, ]/).reject(&:empty?).uniq
+  def parse()
+		new_email_array = @emails.split(/[, ]/).reject(&:empty?).uniq
   end
 end
