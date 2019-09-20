@@ -13,11 +13,7 @@ class EmailAddressParser
 
   def parse
     #binding.pry
-    while @email_list.include?(",") do
-      @email_list.slice!(",")
-    end
-    parsed_list = @email_list.split(" ")
-    parsed_list.uniq
+    @email_list.split(/, | /).uniq
   end
   
 end
